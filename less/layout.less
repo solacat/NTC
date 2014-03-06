@@ -1,88 +1,162 @@
 @import "function";
 
-@m-color:#E671BB;
-@s-color:#1BA1E2;
+@m-color:#034888;
+@l-color:#de9317;
+@r-color:#1ba1e2;
+
 .g-body(@width:100%){
 	.f-pr;
 	width: @width;
 	margin: auto;
 }
 
+/*
+**常用CSS布局代码库
+**使用规范：按左，中，右 == 1，2，3布局匹配即可
+**/
 
-.g-main1-r(){
+/*
+**两列定宽布局
+**/
+.g-mn(){
+	.f-fl;
+	width: 710px;
+	height: 100px;
+	background-color: @m-color;
+}
+.g-sd(){
+	.f-fr;
+	width: 230px;
+	height: 100px;
+	background-color: @l-color;
+}
+
+/*
+**两列右侧自适应布局
+**/
+.g-mn1(){
 	.f-fr;
 	width: 100%;
 	height: 100px;
-	background-color: #E671BB;
+	background-color: @m-color;
 }
-.g-side1-l(){
+.g-mn1c(){
+	margin-left: 200px;
+}
+.g-sd1(){
 	.f-pr;
 	.f-fl;
 	width: 100px;
 	height: 100px;
 	margin-right: -100px;
-	background-color: #1BA1E2;
+	background-color: @l-color;
 }
 
 
-
-.g-main1-l(){
+/*
+**两列左侧自适应布局
+**/
+.g-mn2(){
 	.f-fl;
 	width: 100%;
 	height: 100px;
-	background-color: #E671BB;
+	background-color: @l-color;
 }
-.g-side1-r(){
+.g-mn2c(){
+	margin-right: 240px;
+}
+.g-sd2(){
 	.f-pr;
 	.f-fr;
-	width: 100px;
+	width: 230px;
 	height: 100px;
-	margin-left: -100px;
-	background-color: #1BA1E2;
+	margin-left: -230px;
+	background-color: @m-color;
 }
 
-
-.g-side2-r(){
-	.f-pr;
-	.f-fr;
-	width: 100px;
-	height: 100px;
-	padding: 10px;
-	background-color: #1BA1E2;
-}
-.g-side2-l(){
-	.f-pr;
-	.f-fl;
-	width: 100px;
-	height: 100px;
-	padding: 10px;
-	background-color: #1BA1E2;
-}
-
-
-.g-main3-m(){
+/*
+**三列左侧自适应布局
+**/
+.g-mn11-l{
 	.f-fl;
 	width: 100%;
+	height: 100px;
+	margin-left: -430px;
+	background-color: @l-color;
+}
+.g-mn11c-l{
+	margin-left: 440px;
+}
+.g-sd12-r(){
+	.f-pr;
+	.f-fr;
+	width: 190px;
 	height: 100px;
 	background-color: @m-color;
 }
-.g-side3-l(){
+.g-sd13-r(){
+	.f-pr;
+	.f-fr;
+	width: 230px;
+	height: 100px;
+	margin-left: 10px;
+	background-color: @r-color;
+}
+
+/*
+**三列中间自适应布局
+**/
+.g-sd21(){
 	.f-pr;
 	.f-fl;
 	width: 230px;
 	height: 100px;
 	margin: 0 -230px 0 0;
-	background-color: @s-color;
+	background-color: @l-color;
 }
-.g-side3-r(){
+.g-mn22(){
+	.f-fl;
+	width: 100%;
+	height: 100px;
+	background-color: @m-color;
+}
+.g-mn22c(){
+	margin: 0 200px 0 240px;
+}
+.g-sd23(){
+	.f-pr;
 	.f-fr;
 	width: 190px;
 	height: 100px;
 	margin: 0 0 0 -190px;
-	background-color: @s-color;	
-}
-.g-main3-m-c(){
-	margin: 0 200px 0 240px;
+	background-color: @r-color;	
 }
 
-
+/*
+**三列右侧自适应布局
+**/
+.g-sd31{
+	.f-pr;
+	.f-fl;
+	width: 190px;
+	height: 100px;
+	margin-right: 10px;
+	background-color: @l-color;
+}
+.g-sd32{
+	.f-pr;
+	.f-fl;
+	width: 230px;
+	height: 100px;
+	background-color: @m-color;
+}
+.g-mn33{
+	.f-fr;
+	width: 100%;
+	height: 100px;
+	margin-left: -430px;
+	background-color: @r-color;
+}
+.g-mn33c{
+	margin-left: 440px;
+}

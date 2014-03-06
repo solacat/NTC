@@ -1,0 +1,127 @@
+@import "function";
+
+/*
+**常用页面模块代码库
+**
+**/
+
+/*
+**文本型圆角背景导航
+**
+**使用方法：在写好对应的html DOM结构之后直接调用即可
+**
+**html DOM：
+** <div class="m-nav">
+**      <ul>
+**          <li class="first"><a href="#">首页</a></li>
+**          <li><a href="#">栏目1</a></li>
+**          <li><a href="#">栏目2</a></li>
+**          <li><a href="#">栏目3</a></li>
+**      </ul>
+**      <span class="corner corner-l"></span>
+**      <span class="corner corner-r"></span>
+**  </div>
+**/
+._m-nav(){
+	.m-nav,.m-nav li,.m-nav li a,.m-nav .corner{
+		height: 40px;
+		line-height: 40px;
+	}
+	.m-nav,.m-nav li,.m-nav .corner{
+		background: url(res/nav.png) no-repeat -9999px -9999px;
+	}
+	.m-nav{
+		.f-pr;
+		margin: 0 6px;
+		text-align: center;
+		font-size: 0;
+		letter-spacing: -0.307em;
+		*letter-spacing: normal;
+		*word-spacing: -1px;
+		color: #fff;
+		background-repeat: repeat-x;
+		background-position: 0 0;
+		margin-bottom: 20px;
+	}
+	.m-nav li,.m-nav li a{
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+	}
+	.m-nav li{
+		padding: 0 0 0 1px;
+		font-size: 14px;
+		letter-spacing: normal;
+		word-spacing: normal;
+		background-position: 0 -150px;
+	}
+	.m-nav li.first{
+		background: none;
+	}
+	.m-nav li a{
+		text-decoration: none;
+		color: #fff;
+		&:hover{
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+	.m-nav li a{
+		padding: 0 20px;
+		font-weight: bold;
+	}
+	.m-nav .corner{
+		position: absolute;
+		top: 0;
+		width: 6px;
+		overflow: hidden;
+	}
+	.m-nav .corner-l{
+		left: -6px;
+		background-position: 0 -50px;
+	}
+	.m-nav .corner-r{
+		left: 100%;
+		background-position: 0 -100px;
+	}
+}
+._m-nav-1(){
+	.m-nav-1{
+		text-align: left;
+	}
+}
+._m-nav-2(){
+	.m-nav-2{
+		text-align: right;
+	}
+}
+
+
+/*
+**多行式面包屑导航
+**/
+._m-crumb(){
+	.m-crumb{
+		overflow: hidden;
+		line-height: 1.5;
+	}
+	.m-crumb ul{
+		margin-left: -20px;
+	}
+	.m-crumb li{
+		.fl;
+		word-wrap: normal;
+		white-space: nowrap;
+		&:before{
+			display: inline-block;
+			width: 20px;
+			text-align: center;
+			content: '|';
+			font-size: 12px;
+			color: #ccc;
+			font-family: \5b8b\4f53;
+		}
+	}
+}
+
+

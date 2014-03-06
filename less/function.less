@@ -1,11 +1,14 @@
 .f-cb(){
-    display:block;
-    clear:both;
-    visibility:hidden;
-    height:0;
-    overflow:hidden;
-    content:".";
     zoom:1;
+    &:after{
+        display:block;
+        clear:both;
+        visibility:hidden;
+        height:0;
+        overflow:hidden;
+        content:".";
+        zoom:1;
+    }
 }
 .f-cbli(){
     li:after{

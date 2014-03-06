@@ -15,7 +15,10 @@ local.properties
 .classpath
 .settings/
 .loadpath
-/css
+css/
+*.html
+text.less
+res/
 
 # External tool builders
 .externalToolBuilders/
