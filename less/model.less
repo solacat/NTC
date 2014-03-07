@@ -385,3 +385,374 @@
 		margin: 10px 0 0 10px;
 	}
 }
+
+
+/*
+**上图下文图文列表
+**
+**使用方法：在写好对应的html DOM结构之后直接调用即可
+**
+**html DOM：
+	<div class="m-list4">
+        <ul>
+            <li>
+                <div class="u-img"><a href="#"><img src="css/res/3.jpg" alt=""></a></div>
+                <h3><a href="#">有标题</a></h3>
+                <p>有内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p>
+            </li>
+            <li>
+                <div class="u-img"><a href="#"><img src="css/res/3.jpg" alt=""></a></div>
+                <h3><a href="#">有标题</a></h3>
+                <p>有内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p>
+            </li>
+            <li>
+                <div class="u-img"><a href="#"><img src="css/res/3.jpg" alt=""></a></div>
+                <h3><a href="#">有标题</a></h3>
+                <p>有内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p>
+            </li>
+            <li>
+                <div class="u-img"><a href="#"><img src="css/res/3.jpg" alt=""></a></div>
+                <h3><a href="#">有标题</a></h3>
+                <p>有内容描述内容描述内容描述内容描述内容描述内容描述内容描述内容描述</p>
+            </li>
+        </ul>
+    </div>
+**/
+._m-list4(){
+	.m-list4{
+		padding: 1px 0 0;
+		zoom: 1;
+	}
+	.m-list4 ul{
+		.f-cb;
+		margin: -11px 0 0 -10px;
+	}
+	.m-list4 li{
+		display: inline;
+		.f-fl;
+		width: 150px;
+		margin: 10px 0 0 10px;
+	}
+	.m-list4 h3,.m-list4 p{
+		width: 100%;
+		height: 18px;
+		overflow: hidden;
+		margin: 5px 0 0;
+		line-height: 18px;
+	}
+	.m-list4 h3 a{
+		color: #333;
+		text-decoration: none;
+		&:hover{
+			color: #333;
+		}
+	}
+	.m-list4 .u-img,.m-list4 .u-img2{
+		position: relative;
+		display: block;	
+		width: auto;
+		height: 120px;
+	}
+	.u-img,.u-img2{
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+
+/*
+**含标题和Tab的模块头部
+**
+**使用方法：在写好对应的html DOM结构之后直接调用即可
+**
+**html DOM：
+	<header class="m-hd">
+        <h2 class="u-tt">标题</h2>
+        <div class="more"><a href="#">更多&raquo;</a></div>
+        <ul>
+            <li class="z-crt"><a href="#">默认：居左，不定宽</a></li>
+            <li><a href="#">“标题”和“更多”可删</a></li>
+            <li><a href="#">拓展类课自由组合</a></li>
+            <li><a href="#">标签标签</a></li>
+        </ul>
+    </header>
+**/
+._m-hd(){
+	.m-hd{
+		height: 35px;
+		line-height: 35px;
+		padding: 1px 0 0;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 20px;
+	}
+	.m-hd{
+		ul{
+			.f-fl;
+		}
+		h2{
+			.f-fl;
+			margin: 0 20px 0 0;
+			font-size: 16px;
+			font-family: 'microsoft yahei',sans-serif;
+		}
+		li{
+			position: relative;
+			margin: -1px 0 0 2px;
+			.f-fl;
+			&:first-child{
+				margin-left: 0;
+			}
+			a{
+				display: block;
+				padding: 0 15px;
+				border: 1px solid #ddd;
+				border-bottom: 0;
+				border-radius: 5px 5px 0 0;
+				text-align: center;
+				font-size: 14px;
+				background: #f8f8f8;
+				background: -webkit-gradient(linear,0%,0%,0%,100%,from(#fdfdfd),to(#f8f8f8));
+				background: -webkit-linear-gradient(#fdfdfd,#f8f8f8);
+				background: -moz-linear-gradient(#fdfdfd,#f8f8f8);
+				background: -ms-linear-gradient(#fdfdfd,#f8f8f8);
+				background: linear-gradient(#fdfdfd,#f8f8f8);
+				text-decoration: none;
+				color: #666;
+				&:hover{
+					background: #fff;
+					text-decoration: none;
+					color: #666;
+				}
+			}
+		}
+		.z-crt{
+			a{
+				padding-bottom: 1px;
+				margin-bottom: -1px;
+				background: #fff;
+			}
+		}
+	}
+	.more{
+		.f-fr;
+		margin-left: 10px;
+		a{
+			text-decoration: none;
+		}
+	}
+}
+/*有背景*/
+._m-hd-bg(){
+	.m-hd-bg{
+		padding: 11px 10px 0;
+		border-radius: 5px 5px 0 0;
+		background: #f7f7f7;
+	}
+}
+/*tab无缝*/	
+._m-hd-sl(){
+	.m-hd-sl{
+		li{
+			margin-left: -1px;
+			a{
+				border-radius: 0;
+			}
+			&:first-child{
+				a{
+					border-top-left-radius: 5px;
+				}
+			}
+			&:last-child{
+				a{
+					border-top-right-radius: 5px;
+				}
+			}
+		}
+	}
+}
+/*tab居中*/
+._m-hd-rt(){
+	.m-hd-rt{
+		h2{
+			margin-right: 0;
+		}
+		ul{
+			.f-fr;
+		}
+	}
+}
+/*tab较小*/
+._m-hd-sm(){
+	.m-hd-sm{
+		height: 25px;
+		line-height: 25px;
+		h2{
+			font-size: 14px;
+		}
+		li{
+			padding-bottom: 0 10px;
+			font-size: 12px;
+		}
+	}
+}
+/*tab定宽*/
+._m-hd-fw(){
+	.m-hd-fw{
+		li{
+			width: 80px;
+			a{
+				padding: 0;
+			}
+		}
+	}
+}
+/*tab直角*/
+._m-hd-ra(){
+	.m-hd-ra{
+		li{
+			a{
+				border-radius: 0;
+				&:first-child{
+					a{
+						border-radius: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*
+**简易表单
+**
+**使用方法：在写好对应的html DOM结构之后直接调用即可
+**
+**html DOM：
+	<div class="m-form">
+        <form action="#" name="" method="get">
+            <fieldset>
+                <legend>欢迎注册用户</legend>
+                <div class="formitm">
+                    <label class="lab">账号：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt"/><span class="domain">@163.com</span>
+                        <p>6~8个字符，包括字母，数字，下划线以字母开头，字母或数字结尾</p>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">初始密码：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt">
+                        <p>6~8个字符，区分大小写</p>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">确认密码：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt">
+                        <p>再次输入密码</p>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label clas="lab">验证码：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt"/><img src="" alt="验证码" class="code-img"/>
+                        <a href="#" class="f-ib">换一张</a><p class="tip"><input type="checkbox" id="agree"/><label for="agree">同意“服务条款”和“隐私权保护和个人信息利用政策”</label></p>
+                    </div>
+                </div>
+                <div class="formitm formitm-1"><button class="u-btn" type="button">立即注册</button></div>
+            </fieldset>
+        </form>
+    </div>
+**/
+._m-form(){
+	.m-form{
+		line-height: 29px;
+		color: #555;
+		legend{
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.formitm{
+			padding: 20px 0 0;
+			line-height: 30px;
+		}
+		.formitm-1{
+			padding-left: 100px;
+		}
+		.lab{
+			.f-fl;
+			width: 90px;
+			margin-right: -90px;
+			text-align: right;
+			font-weight: bold;
+		}
+		.ipt{
+			margin-left: 100px;
+			a{
+				text-decoration: none;
+				color: #3891eb;
+				&:hover{
+					text-decoration: none;
+					color: #3891eb;
+				}
+			}
+			img{
+				height: 32px;
+				margin: 0 15px 0 5px;
+			}
+			.domain{
+				margin: 0 0 0 5px;
+				font-weight: bold;
+				color: #777;
+			}
+			p{
+				height: 22px;
+				line-height: 22px;
+				color: #999;
+			}
+		}
+		.ipt *{
+			vertical-align: middle;
+		}
+		.tip{
+			padding-top: 10px;
+			input{
+				margin: 0 5px 3px 0;
+			}
+		}
+		.u-ipt{
+			width: 180px;
+			padding: 5px;
+			height: 17px;
+			border: 1px solid #D9D9D9;
+			border-top-color: #c0c0c0;
+			line-height: 17px;
+			font-size: 14px;
+			color: #777;
+			background: #fff;
+		}
+		.u-btn{
+			display: inline-block;
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			padding: 0 12px;
+			height: 28px;
+			line-height: 28px;
+			border: 1px solid #2d88bf;
+			font-size: 12px;
+			letter-spacing: 1px;
+			word-spacing: normal;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			background: #54aede;
+			color: #fff;
+		}
+	}
+}
