@@ -464,7 +464,7 @@
 
 
 /*
-**含标题和Tab的模块头部
+**含标题和Tab的模块头部(优雅版)
 **
 **使用方法：在写好对应的html DOM结构之后直接调用即可
 **
@@ -481,148 +481,105 @@
     </header>
 **/
 ._m-hd(){
-	.m-hd{
-		height: 35px;
-		line-height: 35px;
-		padding: 1px 0 0;
-		border-bottom: 1px solid #ddd;
-		margin-bottom: 20px;
-	}
-	.m-hd{
-		ul{
-			.f-fl;
-		}
-		h2{
-			.f-fl;
-			margin: 0 20px 0 0;
-			font-size: 16px;
-			font-family: 'microsoft yahei',sans-serif;
-		}
-		li{
-			position: relative;
-			margin: -1px 0 0 2px;
-			.f-fl;
-			&:first-child{
-				margin-left: 0;
-			}
-			a{
-				display: block;
-				padding: 0 15px;
-				border: 1px solid #ddd;
-				border-bottom: 0;
-				border-radius: 5px 5px 0 0;
-				text-align: center;
-				font-size: 14px;
-				background: #f8f8f8;
-				background: -webkit-gradient(linear,0%,0%,0%,100%,from(#fdfdfd),to(#f8f8f8));
-				background: -webkit-linear-gradient(#fdfdfd,#f8f8f8);
-				background: -moz-linear-gradient(#fdfdfd,#f8f8f8);
-				background: -ms-linear-gradient(#fdfdfd,#f8f8f8);
-				background: linear-gradient(#fdfdfd,#f8f8f8);
-				text-decoration: none;
-				color: #666;
-				&:hover{
-					background: #fff;
-					text-decoration: none;
-					color: #666;
-				}
-			}
-		}
-		.z-crt{
-			a{
-				padding-bottom: 1px;
-				margin-bottom: -1px;
-				background: #fff;
-			}
-		}
-	}
-	.more{
-		.f-fr;
-		margin-left: 10px;
-		a{
-			text-decoration: none;
-		}
-	}
+/* 含标题和Tab的模块头部-默认不定宽 */
+.m-hd{
+	height:35px;
+	line-height:35px;
+	padding:1px 0 0;
+	border-bottom:1px solid #ddd;
 }
-/*有背景*/
-._m-hd-bg(){
-	.m-hd-bg{
-		padding: 11px 10px 0;
-		border-radius: 5px 5px 0 0;
-		background: #f7f7f7;
-	}
+.m-hd h2,.m-hd ul,.m-hd li{
+	float:left;display:inline;
 }
-/*tab无缝*/	
-._m-hd-sl(){
-	.m-hd-sl{
-		li{
-			margin-left: -1px;
-			a{
-				border-radius: 0;
-			}
-			&:first-child{
-				a{
-					border-top-left-radius: 5px;
-				}
-			}
-			&:last-child{
-				a{
-					border-top-right-radius: 5px;
-				}
-			}
-		}
-	}
+.m-hd h2{
+	margin:0 20px 0 0;font-size:16px;
 }
-/*tab居中*/
-._m-hd-rt(){
-	.m-hd-rt{
-		h2{
-			margin-right: 0;
-		}
-		ul{
-			.f-fr;
-		}
-	}
+.m-hd ul{
+	margin-left:-2px;
 }
-/*tab较小*/
-._m-hd-sm(){
-	.m-hd-sm{
-		height: 25px;
-		line-height: 25px;
-		h2{
-			font-size: 14px;
-		}
-		li{
-			padding-bottom: 0 10px;
-			font-size: 12px;
-		}
-	}
+.m-hd li{
+	position:relative;
+	margin:-1px 0 0 2px;
 }
-/*tab定宽*/
-._m-hd-fw(){
-	.m-hd-fw{
-		li{
-			width: 80px;
-			a{
-				padding: 0;
-			}
-		}
-	}
+.m-hd li a,.m-hd li a:hover{
+	text-decoration:none;
+	color:#666;
 }
-/*tab直角*/
-._m-hd-ra(){
-	.m-hd-ra{
-		li{
-			a{
-				border-radius: 0;
-				&:first-child{
-					a{
-						border-radius: 0;
-					}
-				}
-			}
-		}
-	}
+.m-hd li a{
+	float: left;
+	padding:0 15px;
+	border:1px solid #ddd;
+	border-bottom:0;
+	border-radius:5px 5px 0 0;
+	text-align:center;
+	font-size:14px;
+	background:#f8f8f8;
+	background:-webkit-gradient(linear,0% 0%,0% 100%,from(#fdfdfd),to(#f8f8f8));
+	background:-webkit-linear-gradient(#fdfdfd,#f8f8f8);
+	background:-moz-linear-gradient(#fdfdfd,#f8f8f8);
+	background:-ms-linear-gradient(#fdfdfd,#f8f8f8);
+	background:linear-gradient(#fdfdfd,#f8f8f8);
+}
+.m-hd li a:hover{
+	background:#fff;
+}
+.m-hd li.z-crt a{
+	position:relative;
+	padding-bottom:1px;
+	margin-bottom:-1px;
+	background:#fff;
+}
+.m-hd .more{
+	float: right;
+	margin-left:10px;
+}
+/* 有背景 */
+.m-hd-bg{
+	padding:11px 10px 0;
+	border-radius:5px 5px 0 0;
+	background:#f7f7f7;
+}
+/* tab无缝 */
+.m-hd-sl li{
+	margin-left:-1px;
+}
+.m-hd-sl li a{
+	border-radius:0;
+}
+.m-hd-sl li:first-child a{
+	border-top-left-radius:5px;
+}
+.m-hd-sl li:last-child a{
+	border-top-right-radius:5px;
+}
+/* tab居右 */
+.m-hd-rt h2{
+	margin-right:0;
+}
+.m-hd-rt ul{
+	float: right;
+}
+/* tab较小 */
+.m-hd-sm{
+	height:25px;
+	line-height:25px;
+}
+.m-hd-sm h2{
+	font-size:14px;
+}
+.m-hd-sm li a{
+	padding:0 10px;
+	font-size:12px;
+}
+/* tab定宽 */
+.m-hd-fw li a{
+	width:78px;
+	padding:0;
+}
+/* tab直角 */
+.m-hd-ra,.m-hd-ra li a,.m-hd-ra li:first-child a,.m-hd-ra li:last-child a{
+	border-radius:0;
+}
 }
 
 
@@ -754,5 +711,340 @@
 			background: #54aede;
 			color: #fff;
 		}
+	}
+}
+
+
+/*
+**简易表格
+**/
+._m-table(){
+	/* 简易数据表格-格边框 */
+	.m-table{
+		table-layout:fixed;
+		width:100%;
+		line-height:1.5;
+	}
+	.m-table th,.m-table td{
+		padding:10px;
+		border:1px solid #ddd;
+	}
+	.m-table th{
+		font-weight:bold;
+	}
+	.m-table tbody tr:nth-child(2n){
+		background:#fafafa;
+	}
+	.m-table tbody tr:hover{
+		background:#f0f0f0;
+	}
+	.m-table .cola{
+		width:100px;
+	}
+	.m-table .colb{
+		width:200px;
+	}
+	/* 简易数据表格-行边框*/
+	.m-table-row th,.m-table-row td{
+		border-width:0 0 1px;
+	}
+	/* 简易数据表格-圆角*/
+	.m-table-rds{
+		border-collapse:separate;
+		border:1px solid #ddd;
+		border-width:0 1px 1px 0;
+		border-radius:5px;
+	}
+	.m-table-rds th,.m-table-rds td{
+		border-width:1px 0 0 1px;
+	}
+	.m-table-rds > :first-child > :first-child > :first-child{
+		border-top-left-radius:5px;
+	}
+	.m-table-rds > :first-child > :first-child > :last-child{
+		border-top-right-radius:5px;
+	}
+	.m-table-rds > :last-child > :last-child > :first-child{
+		border-bottom-left-radius:5px;
+	}
+	.m-table-rds > :last-child > :last-child > :last-child{
+		border-bottom-right-radius:5px;
+	}
+}
+
+
+/*
+**简易翻页器（优雅版）
+**
+**优雅版DOM
+**
+<div class="m-page">
+    <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span></a>
+    <a href="#">1</a>
+    <a href="#" class="z-crt">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <i>...</i>
+    <a href="#">10</a>
+    <a href="#" class="last pagenxt"><span class="pagearr">&gt;</span></a>
+</div>
+<div class="m-page">
+    <a href="#" class="first">1</a>
+    <a href="#" class="z-crt">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <i>...</i>
+    <a href="#" class="last">10</a>
+</div>
+<div class="m-page">
+    <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span>上一页</a>
+    <a href="#" class="last pagenxt">下一页<span class="pagearr">&gt;</span></a>
+</div>
+<div class="m-page m-page-lt">
+    <a href="#" class="first pageprv"><span class="pagearr">&lt;</span>上一页</a>
+    <a href="#">1</a>
+    <a href="#" class="z-crt">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <i>...</i>
+    <a href="#">10</a>
+    <a href="#" class="last pagenxt z-dis">下一页<span class="pagearr">&gt;</span></a>
+</div>
+<div class="m-page m-page-rt">
+    <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span>上一页</a>
+    <a href="#">1</a>
+    <a href="#" class="z-crt">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <i>...</i>
+    <a href="#">10</a>
+    <a href="#" class="last pagenxt">下一页<span class="pagearr">&gt;</span></a>
+</div>
+<div class="m-page m-page-rt m-page-sr">
+    <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span>上一页</a>
+    <a href="#">1</a>
+    <a href="#" class="z-crt">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <i>...</i>
+    <a href="#">10</a>
+    <a href="#" class="last pagenxt">下一页<span class="pagearr">&gt;</span></a>
+</div>
+<div class="m-page m-page-sr m-page-sm">
+    <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span>上一页</a>
+    <a href="#">1</a>
+    <a href="#" class="z-crt">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <i>...</i>
+    <a href="#">10</a>
+    <a href="#" class="last pagenxt">下一页<span class="pagearr">&gt;</span></a>
+</div>
+**/
+._m-page(){
+/* 普通翻页器-默认居中 */
+	.m-page{
+		margin:10px 0 0;
+		text-align:center;
+		line-height:32px;
+		font-size:0;
+		letter-spacing:-0.307em;
+		*letter-spacing:normal;
+		*word-spacing:-1px;
+		word-wrap:normal;
+		white-space:nowrap;
+		color:#999;
+	}
+	.m-page a,.m-page i{
+		display:inline-block;
+		*display:inline;
+		*zoom:1;
+		vertical-align:top;
+		padding:0 12px;
+		margin-left:-1px;
+		border:1px solid #ddd;
+		font-size:12px;
+		letter-spacing:normal;
+		word-spacing:normal;
+		text-shadow:0 1px #fff;
+		background:#fff;
+		-webkit-transition:background-color 0.3s;
+		-moz-transition:background-color 0.3s;
+		-ms-transition:background-color 0.3s;
+		transition:background-color 0.3s;
+	}
+	.m-page a,.m-page a:hover{
+		text-decoration:none;color:#39c;
+	}
+	.m-page a.first{
+		margin-left:0;
+		border-top-left-radius:5px;
+		border-bottom-left-radius:5px;
+	}
+	.m-page a.last{
+		margin-right:0;
+		border-top-right-radius:5px;
+		border-bottom-right-radius:5px;
+	}
+	.m-page a .pagearr{
+		font-weight:bold;
+		font-family:\5b8b\4f53;
+		vertical-align:top;
+		*vertical-align:middle;
+	}
+	.m-page a.pageprv .pagearr{
+		margin-right:3px;
+	}
+	.m-page a.pagenxt .pagearr{
+		margin-left:3px;
+	}
+	.m-page a:hover{
+		background:#f5f5f5;
+	}
+	.m-page a:active{
+		background:#f0f0f0;
+	}
+	.m-page a.z-crt,.m-page a.z-crt:hover,.m-page a.z-crt:active{
+		cursor: default;
+		color:#999;
+		background:#f5f5f5;
+	}
+	.m-page a.z-dis,.m-page a.z-dis:hover,.m-page a.z-dis:active{
+		cursor: default;
+		color:#ccc;
+		background:#fff;
+	}
+	/* 居左 */
+	.m-page-lt{
+		text-align: left;
+	}
+	/* 居右 */
+	.m-page-rt{
+		text-align: right;
+	}
+	/* 较小 */
+	.m-page-sm{
+		line-height:22px;
+	}
+	.m-page-sm a,.m-page-sm i{
+		padding:0 8px;
+	}
+	/* 分离 */
+	.m-page-sr a,.m-page-sr i{
+		margin:0 3px;
+		border-radius:5px;
+	}
+	.m-page-sr i{
+		border:0;
+	}
+	.m-page-sr a.first,.m-page-sr a.last{
+		border-radius:5px;
+	}
+}
+
+
+/*
+**操作型弹出浮层（优雅版）
+**/
+._m-layer(){
+	/* 操作型弹出浮层-默认居中 */
+	.m-layer,.m-layer .lymask{
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+	.m-layer{
+		display:none;
+		position:fixed;
+		_position:absolute;
+		z-index:999;
+	}
+	.m-layer .lymask{
+		position:absolute;
+		background:#000;
+		opacity:0.6;
+		filter:alpha(opacity=60);
+	}
+	.m-layer .lytable{
+		table-layout:fixed;
+		width:100%;
+		height:100%;
+	}
+	.m-layer .lytd{
+		width:100%;
+		height:100%;
+		vertical-align:middle;
+	}
+	.m-layer .lywrap{
+		position:relative;
+		width:400px;
+		margin:0 auto;
+		border:5px solid #aaa;
+		border:5px solid rgba(0,0,0,0.3);
+		border-radius:10px;
+		box-shadow:0 2px 10px rgba(0,0,0,0.2);
+	}
+	.m-layer .lytt{
+		position:relative;
+		padding:10px;
+		height:20px;
+		margin:0 0 -1px;
+		line-height:20px;
+		border-bottom:1px solid #ddd;
+		border-radius:5px 5px 0 0;
+		background:#fafafa;
+	}
+	.m-layer .lytt h2{
+		float: left;
+		font-size:16px;
+	}
+	.m-layer .lyclose{
+		float: right;
+		font-weight:bold;
+		font-family:arial;
+		font-size:24px;
+		_font-size:16px;
+		color:#ccc;
+		text-shadow:0 1px #fff;
+		cursor:pointer;
+	}
+	.m-layer .lyclose:hover{
+		color:#aaa;
+	}
+	.m-layer .lyct:last-child,.m-layer .lybt{
+		border-bottom-right-radius:5px;
+		border-bottom-left-radius:5px;
+	}
+	.m-layer .lyct:first-child{
+		border-top-left-radius:5px;
+		border-top-right-radius:5px;
+	}
+	.m-layer .lyct{
+		padding:20px;
+		background:#fff;
+	}
+	.m-layer .lybt{
+		height:30px;
+		line-height:30px;
+		padding:10px;
+		margin:-1px 0 0;
+		border-top:1px solid #ddd;
+		background:#f7f7f7;
+	}
+	.m-layer .lyother{
+		float: left;
+		color:#999;
+	}
+	.m-layer .lybtns{
+		float: right;
+	}
+	.m-layer .lybtns button{
+		float: left;
+		margin-left:10px;
+	}
+	/* 显示 */
+	.m-layer-show{
+		display:block;
 	}
 }
